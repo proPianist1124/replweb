@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap');
+:root{
+	--background:#0e1526;
+	--background-lighter:#1c2334;
+	--background-lightest:#2b3246;
+	--color:#f5f9fc;
+	--color-darker:lightgray;
+	--color-darkest:gray;
+	--button:#0353a6;
+	--button-lighter:#0079f2;
+	--font:'IBM Plex Sans', sans-serif;
+}
+body{
+	background-color:var(--background);
+	color:var(--color);
+	font-family:var(--font);
+	padding:10px 20px;
+}
+button{
+	width:165px;
+	height:30px;
+	text-align:center;
+	border:none;
+	padding:3px 5px;
+	background-color:var(--button);
+	color:var(--color);
+	font-family:var(--font);
+	font-size:15px;
+	border-radius:5px;
+	transition:0.2s;
+}
+button:hover{
+	background-color:var(--button-lighter);
+}
+a{
+	color:var(--primary);
+	text-decoration:none;
+}
+input{
+	width:300px;
+	height:40px;
+	background-color:var(--background-lighter);
+	transition:0.1s;
+	color:var(--color);
+	border:none;
+	font-size:20px;
+	font-family:var(--font);
+	padding:2px 5px;
+	border-radius:5px;
+}
+input:focus{
+	outline:none;
+	background-color:var(--background-lightest);
+}
+::-webkit-scrollbar {
+  width: 20px;
+}
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px var(--background-lightest);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--background-lighter);
+}
+/* background-color:#004182; */
+
+.sidenav {
+  height: 100%;
+  width: 220px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: var(--background-lighter);
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+.sidenav a{
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 18px;
+  color: var(--color-darker);
+  display: block;
+	border-radius:5px;
+}
+.sidenav .links:hover {
+	background-color:var(--background-lightest);
+}
+.main-content {
+  margin-left: 220px;
+  padding: 0px 10px;
+}
+
+.animate{
+	position: relative;
+  animation-name: moveIntro;
+  animation-duration: 1s; 
+}
+@keyframes moveIntro {
+  0%   {right:200px; top:0px;}
+  25%  {right:0px; top:0px;}
+}
+
+.repl{
+	max-width:800px;
+	border-radius:5px;
+	background-color:var(--background-lighter);
+	border:2px solid var(--background);
+	transition:0.2s;
+	padding: 10px 15px;
+}
+.repl:hover{
+	background-color:var(--background-lightest);
+}
